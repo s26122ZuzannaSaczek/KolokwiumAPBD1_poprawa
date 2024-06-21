@@ -3,29 +3,29 @@
 public class Animal
 {
     public int ID { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
     public DateTime AdmissionDate { get; set; }
-    public _OwnerID OwnerID { get; set; }
-    public _AnimalClassID AnimalClassID { get; set; }
-    public List<Procedure> Procedures { get; set; }
+    public Owner OwnerID { get; set; } = null!;
+    public AnimalClass AnimalClassID { get; set; }
+    public List<Procedure> Procedures { get; set; } = null!;
 }
 
-public class _OwnerID
+public class Owner
 {
     public int ID { get; set; }
-    public string FnirstName { get; set; }
-    public string LastName { get; set; }
+    public string FnirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
 }
 
 public class Procedure
 {
-    public string Name { get; set; }
-    public string Describtion { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string Describtion { get; set; } = string.Empty;
     public DateTime Date { get; set; }
 }
 
-public class _AnimalClassID
+public class AnimalClass
 {
     public int ID { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 }
